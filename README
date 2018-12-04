@@ -1,0 +1,26 @@
+Code by D. Patrick Bastedo, written in Python 2.7.
+
+Dependencies:
+Matplotlib
+Numpy
+
+Usage:
+
+Case A - image conversion using either the default or a user-specified r/g threshold
+
+python live_dead_filter.py input.png
+
+or
+
+python live_dead_filter.py input.png thresh 0.75
+
+
+Case B - test alternative parameter values
+
+This scenario produces a series of derivative images (including isolated red, green, blue pixel channels, a histogram of red/green ratio values, a representation of the red/green critical range, and grayscale-masked output) for a default input file (included as sample_input.png) or any alternative image specified as an argument when calling the script, as indicated below.
+
+python live_dead_filter.py test_params input alt_input.png thresh 0.9 test_range 0.2 
+
+python live_dead_filter.py test_params test_range 0.2
+
+python live_dead_filter.py test_params alt_input.png thresh 0.9
