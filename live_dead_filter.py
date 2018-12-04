@@ -13,7 +13,7 @@ def main(fname, thresh=0.85):
 	width_in_pixels, height_in_pixels, number_of_planes =  arr.shape
 
 	## Calculate the ratio between red and green channels.
-	#3 Note:  avoid division by zero error by adding 1/255 to the green array
+	## Note:  avoid division by zero error by adding 1/255 to the green array
 	r_g = arr[:, :, 0]/(arr[:, :, 1] + 0.0039) 
 
 	## Calculate luminosity of each pixel
@@ -133,24 +133,6 @@ def resize_labels(fig):
 			ax.tick_params(labelsize=16)
 	fig.set_size_inches(3.7, 3.)
 	return fig
-
-# def parse_param_list(param_list):
-# 	input_file, thresh, test_range = ('sample_input.png', 0.85, 0.7)
-
-# 	param_pairs = []
-# 	n_params = len(param_list)/2
-# 	errors = False
-
-# 	for p in range(n_params):
-
-# 		p_name, value = param_list[2*p:2*p+2]
-		
-# 		if p_name == 'input': input_file = value
-# 		elif p_name == 'thresh': thresh = float(value)
-# 		elif p_name == 'test_range': test_range = float(value)
-# 		else: errors = True
-
-# 	return input_file, thresh, test_range, errors
 
 
 
