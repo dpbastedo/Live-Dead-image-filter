@@ -21,6 +21,10 @@ This scenario produces a series of derivative images (including isolated red, gr
 
 python live_dead_filter.py test_params input alt_input.png thresh 0.9 test_range 0.2 
 
+or
+
 python live_dead_filter.py test_params test_range 0.2
+
+or
 
 python live_dead_filter.py test_params alt_input.png thresh 0.9
