@@ -35,7 +35,7 @@ def main(fname, thresh=0.85):
 	plt.imshow(arr)
 	plt.subplots_adjust(left=0, right=1., bottom=0, top=1.)
 	fig.set_size_inches(width_in_pixels/400., height_in_pixels/400.)
-	fig.savefig(path.join(pf, fname+ ' - live_dead_filter.png'), dpi=400.)
+	fig.savefig(path.join('.', fname+ ' - live_dead_filter.png'), dpi=400.)
 
 def test_params(input_file='sample_input.png', thresh=0.85, test_range=0.7):
 
@@ -171,16 +171,19 @@ if __name__ == '__main__':
 			else:
 				print 'Error in parameter entry.  Please consult the README.'
 
-		elif len(args) in [3, 2]:
-			if len(args) == 3:
-				fname = args[1:]
+		elif len(args) in [4, 2]:
+			if len(args) == 4:
+				fname, pname, value = args[1:]
+				if pname == 'thresh':
+					main(fname, thresh=float(value))
+				else:
+					print 'Could not understand arguments. Please consult the README.'
 				
 			elif len(args) == 2:
 				pf = '.'
 				fname = args[1]
-
-			main(fname)
+				main(fname)
 
 		else:
 			print 'Could not understand arguments. Please consult the README.' 
-			print 'Quitting.'
+
