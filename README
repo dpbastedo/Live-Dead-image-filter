@@ -1,3 +1,4 @@
+PIDIT (Plant Immunity and Disease Image Thresholding) filter
 Code by D. Patrick Bastedo, written in Python 2.7.
 
 Dependencies:
@@ -11,11 +12,13 @@ Usage:
 Case A - Convert any image in the same folder using either the default red/green 
 threshold or one specified by the user.
 
-python live_dead_filter.py input.png
+e.g.
+
+python pidit_filter.py input.png
 
 or
 
-python live_dead_filter.py input.png thresh 0.75
+python pidit_filter.py input.png thresh 0.75
 
 
 Case B - test alternative parameter values
@@ -26,12 +29,14 @@ the red/green critical range, and grayscale-masked output) for a default input f
 (included as sample_input.png) or any alternative image specified as an argument 
 when calling the script, as indicated below.
 
-python live_dead_filter.py test_params input alt_input.png thresh 0.9 test_range 0.2 
+e.g.
+
+python pidit_filter.py test_params input alt_input.png thresh 0.9 test_range 0.2 
 
 or
 
-python live_dead_filter.py test_params test_range 0.2
+python pidit_filter.py test_params test_range 0.2
 
 or
 
-python live_dead_filter.py test_params alt_input.png thresh 0.9
+python pidit_filter.py test_params alt_input.png thresh 0.9
