@@ -1,5 +1,5 @@
-PIDIT (Plant Immunity and Disease Image Thresholding) filter
-Code by D. Patrick Bastedo, written in Python 2.7.
+Live/Dead Image Thresholding filter
+Code by D. Patrick Bastedo, 2018.
 
 Dependencies:
 
@@ -14,11 +14,11 @@ threshold or one specified by the user.
 
 e.g.
 
-python pidit_filter.py input.png
+python live_dead_filter.py input.png
 
 or
 
-python pidit_filter.py input.png thresh 0.75
+python live_dead_filter.py input.png thresh 0.75
 
 
 Case B - test alternative parameter values
@@ -31,12 +31,12 @@ when calling the script, as indicated below.
 
 e.g.
 
-python pidit_filter.py test_params input alt_input.png thresh 0.9 test_range 0.2 
+python live_dead_filter.py test_params input alt_input.png thresh 0.9 test_range 0.2 
 
 or
 
-python pidit_filter.py test_params test_range 0.2
+python live_dead_filter.py test_params test_range 0.2
 
 or
 
-python pidit_filter.py test_params alt_input.png thresh 0.9
+python live_dead_filter.py test_params alt_input.png thresh 0.9
